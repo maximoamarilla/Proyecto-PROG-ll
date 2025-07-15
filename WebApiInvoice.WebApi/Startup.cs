@@ -11,6 +11,7 @@ public static class Startup
         services.AddDataAccessLayer();
 
         services.AddScoped<IProductService, ProductService>();
+        services.AddScoped<IProveedorService, ProveedorService>();
 
         services.AddControllers()
         .AddJsonOptions(x => x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles)
